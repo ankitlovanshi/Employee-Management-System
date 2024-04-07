@@ -1,0 +1,10 @@
+<h2>My Leaves</h2>
+<ul>
+  <% @leaves.each do |leave| %>
+    <li>
+    <a href="/leaves/<%= leave.id %>">
+      <%= leave.start_date %>
+    </li>
+  <% end %>
+</ul>
+<%= link_to "Apply Leave", new_leafe_path %>

@@ -6,5 +6,6 @@
 <%= "Last Name: #{@profile.email}" %>
 </br>
 <%= "Department: #{@profile.department}" %>
-
 </h2>
+
+<li><%= link_to "Edit Profile", edit_profile_path(@profile) %></li>

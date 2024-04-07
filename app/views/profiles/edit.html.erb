@@ -1,0 +1,13 @@
+<%= form_tag(url: edit_profile_path(@profile), method: :patch) do %>
+  <p>
+    <%= label_tag :first_name, "First Name" %><br>
+    <%= text_field_tag :first_name, @profile.first_name %>
+  </p>
+  <p>
+    <%= label_tag :last_name, "Last Name" %><br>
+    <%= text_field_tag :last_name, @profile.last_name %>
+  </p>
+  <p>
+    <%= submit_tag "Submit" %>
+  </p>
+<% end %>

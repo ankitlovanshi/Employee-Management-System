@@ -1,0 +1,31 @@
+<%= form_for(@status) do |form| %>
+  <div>
+    <%= form.label :date %><br>
+    <%= form.text_field :date, class: 'datepicker' %>
+  </div>
+
+  <div>
+    <%= form.label :status %><br>
+    <%= form.text_area :status %><br>
+  </div>
+
+  <div>
+    <%= form.hidden_field :employee_id, value: current_employee.id %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var datepickers = document.querySelectorAll('.datepicker');
+    datepickers.forEach(function(datepicker) {
+      new Pikaday({
+        field: datepicker,
+        format: 'YYYY-MM-DD'
+      });
+    });
+  });
+</script>

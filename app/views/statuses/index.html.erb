@@ -1,0 +1,11 @@
+<h1> Status</h1>
+
+<ul>
+  <% @status.each do |status| %>
+    <li>
+    <a href="/statuses/<%= status.id %>">
+      <%= status.date %>
+    </li>
+  <% end %>
+</ul>
+<%= link_to "new Status", new_status_path %>
